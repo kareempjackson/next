@@ -6,7 +6,8 @@ const nextConfig: NextConfig = {
       {
         source: '/(.*)',
         headers: [
-          { key: 'Content-Security-Policy', value: "frame-ancestors 'self' https://*.ghyst.io https://*.vercel.app http://localhost:3000 http://localhost:3001" },
+          { key: 'Content-Security-Policy', value: 'frame-ancestors *' },
+          { key: 'X-Frame-Options', value: 'ALLOWALL' },
         ],
       },
     ];
